@@ -34,12 +34,12 @@
     border: none;
     border-radius: 5px;
     box-shadow: 1px 1px 5px #454343;
-
 }
 
-.box input .btn :hover {
+.btn:hover {
     cursor: pointer;
-    background-color: #53d3ed;
+    color: #53d3ed;
+    box-shadow: 1px 1px 5px #53d3ed;
 }
 
 .dbl {
@@ -58,13 +58,13 @@
     font-size: xx-large;
     background-color: transparent;
     color: white;
-    text-align: right;
+    text-align: end;
     border: none;
     border-radius: 5px;
     box-shadow: 1px 1px 5px #454343;
 }
 
-#colour {
+.colour {
     color: #53d3ed;
 }
 

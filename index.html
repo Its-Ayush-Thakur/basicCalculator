@@ -6,42 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 
 <body>
     <div class="container">
         <div class="box">
-            <form action="">
-                <div class="screen"> <input type="text" name="display" value=""></div>
-                <div class="body">
-                    <input type="button" id="colour" class="btn dbl" value="AC" onclick="display.value = ''">
-                    <input type="button" id="colour" class="btn backspace" value="⌫"
-                        onclick="display.value = display.value.toString().slice(0,-1)">
-
-                    <input type="button" id="colour" class=btn value="/" onclick="display.value += '/'">
-                    <input type="button" class=btn value="7" onclick="display.value += '7'">
-                    <input type="button" class=btn value="8" onclick="display.value += '8'">
-                    <input type="button" class=btn value="9" onclick="display.value += '9'">
-                    <input type="button" id="colour" class=btn value="*" onclick="display.value += '*'">
-                    <input type="button" class=btn value="4" onclick="display.value += '4'">
-                    <input type="button" class=btn value="5" onclick="display.value += '5'">
-                    <input type="button" class=btn value="6" onclick="display.value += '6'">
-                    <input type="button" id="colour" class=btn value="-" onclick="display.value += '-'">
-                    <input type="button" class=btn value="1" onclick="display.value += '1'">
-                    <input type="button" class=btn value="2" onclick="display.value += '2'">
-                    <input type="button" class=btn value="3" onclick="display.value += '3'">
-                    <input type="button" id="colour" class=btn value="+" onclick="display.value += '+'">
-                    <input type="button" class=btn value="00" onclick="display.value += '00'">
-                    <input type="button" class=btn value="0" onclick="display.value += '0'">
-                    <input type="button" class=btn value="." onclick="display.value += '.'">
-                    <input type="button" id="colour" class=btn value="=" id="ans"
-                        onclick="display.value = eval(display.value)">
-                </div>
-
-            </form>
+            <div class="screen"> <input readonly id="dspl" type="text" name="display" value=""></div>
+            <div class="body">
+                <button class="btn dbl colour" onclick="display.value = ''">AC</button>
+                <button class="btn backspace colour"
+                    onclick="display.value = display.value.toString().slice(0,-1)">⌫</button>
+                <button class="btn colour" onclick="addtoscr('/')">/</button>
+                <button class="btn" onclick="addtoscr('7')">7</button>
+                <button class="btn" onclick="addtoscr('8')">8</button>
+                <button class="btn" onclick="addtoscr('9')">9</button>
+                <button class="btn colour" onclick="addtoscr('*')">*</button>
+                <button class="btn" onclick="addtoscr('4')">4</button>
+                <button class="btn" onclick="addtoscr('5')">5</button>
+                <button class="btn" onclick="addtoscr('6')">6</button>
+                <button class="btn colour" onclick="addtoscr('-')">-</button>
+                <button class="btn" onclick="addtoscr('1')">1</button>
+                <button class="btn" onclick="addtoscr('2')">2</button>
+                <button class="btn" onclick="addtoscr('3')">3</button>
+                <button class="btn colour" onclick="addtoscr('+')">+</button>
+                <button class="btn" onclick="addtoscr('00')">00</button>
+                <button class="btn" onclick="addtoscr('0')">0</button>
+                <button class="btn" onclick="addtoscr('.')">.</button>
+                <button class="btn colour" onclick="ans()">=</button>
+            </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
